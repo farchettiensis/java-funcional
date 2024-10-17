@@ -1,6 +1,7 @@
 package lista2;
 
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class TesteStreams {
     public static void main(String[] args) {
