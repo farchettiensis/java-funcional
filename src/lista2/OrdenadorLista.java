@@ -12,7 +12,13 @@ public class OrdenadorLista {
     }
 
     public static int[] ordenarListaComLambda(int[] array) {
-        List<Integer> lista = Arrays.stream(array).boxed().sorted((a, b) -> a - b).collect(Collectors.toList());
-        return lista.stream().mapToInt(i -> i).toArray();
+        List<Integer> lista = Arrays.stream(array)
+                .boxed()
+                .sorted((a, b) -> a - b)
+                .collect(Collectors.toList());
+
+        return lista.stream()
+                .mapToInt(i -> i)
+                .toArray();
     }
 }
