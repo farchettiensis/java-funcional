@@ -63,7 +63,7 @@ public class AulaLerArquivos {
             String[] dados = linha.split(";");
             System.out.println("id: " + dados[0] + " *** produto: " + dados[1] + "*** preço: " + dados[2]);
 
-            produtos.add(new Produto(dados[0], dados[1], dados[2]));
+            produtos.add(new Produto(Integer.parseInt(dados[0]), dados[1], Double.parseDouble(dados[2])));
         }
 
         produtos.forEach(System.out::println);
@@ -92,7 +92,7 @@ public class AulaLerArquivos {
         Files.lines(Paths.get("src/main/resources/produtos.csv"))
                 .skip(1)
                 .map(linha -> linha.split(";"))
-                .map(dados -> new Produto(dados[0], dados[1], dados[2]))
+                .map(dados -> new Produto(Integer.parseInt(dados[0]), dados[1], Double.parseDouble(dados[2])))
                 .forEach(System.out::println);
     }
 }

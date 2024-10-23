@@ -1,4 +1,4 @@
 package main.java.inputoutput;
 
-public record Produto(String id, String nome, String preco) {
+public record Produto(int id, String nome, double preco) {
 }
